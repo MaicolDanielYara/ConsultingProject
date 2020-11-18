@@ -1,0 +1,9 @@
+C:\ConsultingProject\src\ConsultingProject.Core\bin\Debug\netcoreapp3.1\ConsultingProject.Core.deps.json
+C:\ConsultingProject\src\ConsultingProject.Core\bin\Debug\netcoreapp3.1\ConsultingProject.Core.dll
+C:\ConsultingProject\src\ConsultingProject.Core\bin\Debug\netcoreapp3.1\ConsultingProject.Core.pdb
+C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\ConsultingProject.Core.csprojAssemblyReference.cache
+C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\ConsultingProject.Core.AssemblyInfoInputs.cache
+C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\ConsultingProject.Core.AssemblyInfo.cs
+C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\ConsultingProject.Core.csproj.CoreCompileInputs.cache
+C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\ConsultingProject.Core.dll
+C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\ConsultingProject.Core.pdb

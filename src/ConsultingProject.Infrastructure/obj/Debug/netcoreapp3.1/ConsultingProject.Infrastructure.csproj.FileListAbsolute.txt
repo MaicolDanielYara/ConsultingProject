@@ -1,0 +1,15 @@
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\bin\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.deps.json
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\bin\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.runtimeconfig.json
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\bin\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.runtimeconfig.dev.json
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\bin\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.dll
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\bin\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.pdb
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\bin\Debug\netcoreapp3.1\ConsultingProject.Core.dll
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\bin\Debug\netcoreapp3.1\ConsultingProject.Core.pdb
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\obj\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.csprojAssemblyReference.cache
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\obj\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.AssemblyInfoInputs.cache
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\obj\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.AssemblyInfo.cs
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\obj\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.csproj.CoreCompileInputs.cache
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\obj\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.csproj.CopyComplete
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\obj\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.dll
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\obj\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.pdb
+C:\ConsultingProject\src\ConsultingProject.Infrastructure\obj\Debug\netcoreapp3.1\ConsultingProject.Infrastructure.genruntimeconfig.cache
