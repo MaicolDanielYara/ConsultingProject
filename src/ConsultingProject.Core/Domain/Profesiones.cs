@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsultingProject.Web
+namespace ConsultingProject.Core.domain
 {
     public partial class Profesiones
     {
