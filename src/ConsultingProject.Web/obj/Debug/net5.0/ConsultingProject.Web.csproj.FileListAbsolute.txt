@@ -3,8 +3,6 @@ C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\Google.Protobuf.
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\K4os.Compression.LZ4.dll
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\K4os.Compression.LZ4.Streams.dll
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\K4os.Hash.xxHash.dll
-C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\Microsoft.Bcl.HashCode.dll
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -154,11 +152,6 @@ C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\ru\Microsoft.Cod
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
-C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
-C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
-C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
-C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\alpine-x64\native\libe_sqlite3.so
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\linux-arm\native\libe_sqlite3.so
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\linux-arm64\native\libe_sqlite3.so
@@ -171,5 +164,14 @@ C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-arm
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
-C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
-C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\ConsultingProject\src\ConsultingProject.Web\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll

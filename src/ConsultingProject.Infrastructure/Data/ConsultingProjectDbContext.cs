@@ -1,5 +1,5 @@
 ﻿using System;
-using ConsultingProject.Core.domain;
+using ConsultingProject.Core.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 

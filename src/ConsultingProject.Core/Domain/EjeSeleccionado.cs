@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsultingProject.Core.domain
+namespace ConsultingProject.Core.Domain
 {
     public partial class EjeSeleccionado
     {

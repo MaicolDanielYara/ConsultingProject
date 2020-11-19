@@ -7,3 +7,6 @@ C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\Consulti
 C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\ConsultingProject.Core.csproj.CoreCompileInputs.cache
 C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\ConsultingProject.Core.dll
 C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\ConsultingProject.Core.pdb
+C:\ConsultingProject\src\ConsultingProject.Core\bin\Debug\netcoreapp3.1\ConsultingProject.Core.runtimeconfig.json
+C:\ConsultingProject\src\ConsultingProject.Core\bin\Debug\netcoreapp3.1\ConsultingProject.Core.runtimeconfig.dev.json
+C:\ConsultingProject\src\ConsultingProject.Core\obj\Debug\netcoreapp3.1\ConsultingProject.Core.genruntimeconfig.cache

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ConsultingProject.Core.domain
+namespace ConsultingProject.Core.Domain
 {
     public partial class Proyecto
     {
