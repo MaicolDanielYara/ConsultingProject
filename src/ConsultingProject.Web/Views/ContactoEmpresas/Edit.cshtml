@@ -1,0 +1,50 @@
+﻿@model ConsultingProject.Core.Domain.ContactoEmpresa
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>ContactoEmpresa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdContactoEmpresa" />
+            <div class="form-group">
+                <label asp-for="NombresContactoEmpresa" class="control-label"></label>
+                <input asp-for="NombresContactoEmpresa" class="form-control" />
+                <span asp-validation-for="NombresContactoEmpresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApellidosContactoEmpresa" class="control-label"></label>
+                <input asp-for="ApellidosContactoEmpresa" class="form-control" />
+                <span asp-validation-for="ApellidosContactoEmpresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Correo" class="control-label"></label>
+                <input asp-for="Correo" class="form-control" />
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono" class="control-label"></label>
+                <input asp-for="Telefono" class="form-control" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

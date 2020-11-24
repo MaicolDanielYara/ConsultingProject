@@ -1,0 +1,96 @@
+﻿@model IEnumerable<ConsultingProject.Core.Domain.Profesional>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoDocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCargoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEjeNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEstudioNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdProfesionNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdProyectoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdTipoDocumentoNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCargoNavigation.IdCargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEjeNavigation.IdEje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEstudioNavigation.IdEstudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProfesionNavigation.IdProfesion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProyectoNavigation.IdProyecto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoDocumentoNavigation.IdTipoDocumento)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdProfesional">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdProfesional">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdProfesional">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

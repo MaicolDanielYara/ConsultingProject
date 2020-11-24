@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ConsultingProject.Core.Domain.Herramientas>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Herramienta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEjeNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Herramienta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEjeNavigation.IdEje)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdHerramienta">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdHerramienta">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdHerramienta">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

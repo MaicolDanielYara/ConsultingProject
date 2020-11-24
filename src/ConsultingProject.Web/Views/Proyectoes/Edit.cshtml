@@ -1,0 +1,60 @@
+﻿@model ConsultingProject.Core.Domain.Proyecto
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Proyecto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdProyecto" />
+            <div class="form-group">
+                <label asp-for="NombreProyecto" class="control-label"></label>
+                <input asp-for="NombreProyecto" class="form-control" />
+                <span asp-validation-for="NombreProyecto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoConvenio" class="control-label"></label>
+                <input asp-for="NoConvenio" class="form-control" />
+                <span asp-validation-for="NoConvenio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Objeto" class="control-label"></label>
+                <input asp-for="Objeto" class="form-control" />
+                <span asp-validation-for="Objeto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaInicio" class="control-label"></label>
+                <input asp-for="FechaInicio" class="form-control" />
+                <span asp-validation-for="FechaInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlazoEjecucion" class="control-label"></label>
+                <input asp-for="PlazoEjecucion" class="form-control" />
+                <span asp-validation-for="PlazoEjecucion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Presupuesto" class="control-label"></label>
+                <input asp-for="Presupuesto" class="form-control" />
+                <span asp-validation-for="Presupuesto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

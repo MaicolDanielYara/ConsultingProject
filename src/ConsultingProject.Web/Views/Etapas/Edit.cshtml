@@ -1,0 +1,45 @@
+﻿@model ConsultingProject.Core.Domain.Etapas
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Etapas</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdEtapa" />
+            <div class="form-group">
+                <label asp-for="NombreEtapa" class="control-label"></label>
+                <input asp-for="NombreEtapa" class="form-control" />
+                <span asp-validation-for="NombreEtapa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescripcionEtapa" class="control-label"></label>
+                <input asp-for="DescripcionEtapa" class="form-control" />
+                <span asp-validation-for="DescripcionEtapa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProyecto" class="control-label"></label>
+                <select asp-for="IdProyecto" class="form-control" asp-items="ViewBag.IdProyecto"></select>
+                <span asp-validation-for="IdProyecto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

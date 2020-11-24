@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ConsultingProject.Core.Domain.Etapas>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreEtapa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionEtapa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdProyectoNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreEtapa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionEtapa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProyectoNavigation.IdProyecto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdEtapa">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdEtapa">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdEtapa">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

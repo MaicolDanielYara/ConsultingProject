@@ -1,0 +1,96 @@
+﻿@model IEnumerable<ConsultingProject.Core.Domain.Empresa>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreEmpresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DigitoVerificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fechaconstlegal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CódigoDepartamentoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CódigoMunicipioNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEjeNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdProfesionalNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdProyectoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdSectorNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdTamañoEmpresaNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreEmpresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DigitoVerificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fechaconstlegal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CódigoDepartamentoNavigation.CódigoDepartamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CódigoMunicipioNavigation.CódigoMunicipio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEjeNavigation.IdEje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProfesionalNavigation.IdProfesional)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProyectoNavigation.IdProyecto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSectorNavigation.IdSector)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTamañoEmpresaNavigation.IdTamañoEmpresa)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdEmpresa">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdEmpresa">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdEmpresa">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
