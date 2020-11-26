@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-ConsultingProject.Web-6729BED6-44A2-4748-95A1-00A92559956E</UserSecretsId>
+    <UserSecretsId>aspnet-ConsultingProject.Web-00F21E27-7448-47D1-AE23-7B2D72F896E4</UserSecretsId>
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
   </PropertyGroup>
 

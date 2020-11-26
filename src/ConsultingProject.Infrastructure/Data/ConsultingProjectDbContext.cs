@@ -41,7 +41,7 @@ namespace ConsultingProject.Infrastructure.Data
             /*if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("database=consulting_project;server=localhost;port=3310;user id=root;password=1000217042maicol");
+                optionsBuilder.UseMySQL("database=ConsultingProject;server=localhost;port=3310;user id=root;password=mysqlserver");
             }*/
         }
 
@@ -126,7 +126,7 @@ namespace ConsultingProject.Infrastructure.Data
             });
 
             modelBuilder.Entity<ContactoEmpresa>(entity =>
-            {  
+            {
                 entity.HasKey(e => e.IdContactoEmpresa)
                     .HasName("PRIMARY");
 
