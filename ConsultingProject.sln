@@ -1,15 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{19ACC646-EFBC-4C6A-ABD7-7542443E62C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsultingProject.Core", "src\ConsultingProject.Core\ConsultingProject.Core.csproj", "{C6723A8D-D65C-4D02-8E20-5EA6BA6FA1A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsultingProject.Core", "src\ConsultingProject.Core\ConsultingProject.Core.csproj", "{C6723A8D-D65C-4D02-8E20-5EA6BA6FA1A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsultingProject.Infrastructure", "src\ConsultingProject.Infrastructure\ConsultingProject.Infrastructure.csproj", "{D9F4F9D6-3BAE-487F-8855-847BB8F906FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsultingProject.Infrastructure", "src\ConsultingProject.Infrastructure\ConsultingProject.Infrastructure.csproj", "{D9F4F9D6-3BAE-487F-8855-847BB8F906FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsultingProject.Web", "src\ConsultingProject.Web\ConsultingProject.Web.csproj", "{151334BE-3124-4C7B-B38E-7F3F29A40920}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsultingProject.Web", "src\ConsultingProject.Web\ConsultingProject.Web.csproj", "{151334BE-3124-4C7B-B38E-7F3F29A40920}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.UI", "01.UI", "{57D6CCA7-277F-4DB0-8A5B-B49BC3037997}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Infrastructure", "02.Infrastructure", "{E0248296-25A5-42AF-8741-10FF40FE5777}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Core", "03.Core", "{CDF926EC-4844-46CB-9FDB-E0210672831E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C6723A8D-D65C-4D02-8E20-5EA6BA6FA1A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -61,9 +64,18 @@ Global
 		{151334BE-3124-4C7B-B38E-7F3F29A40920}.Release|x86.ActiveCfg = Release|Any CPU
 		{151334BE-3124-4C7B-B38E-7F3F29A40920}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C6723A8D-D65C-4D02-8E20-5EA6BA6FA1A3} = {19ACC646-EFBC-4C6A-ABD7-7542443E62C6}
-		{D9F4F9D6-3BAE-487F-8855-847BB8F906FB} = {19ACC646-EFBC-4C6A-ABD7-7542443E62C6}
-		{151334BE-3124-4C7B-B38E-7F3F29A40920} = {19ACC646-EFBC-4C6A-ABD7-7542443E62C6}
+		{C6723A8D-D65C-4D02-8E20-5EA6BA6FA1A3} = {CDF926EC-4844-46CB-9FDB-E0210672831E}
+		{D9F4F9D6-3BAE-487F-8855-847BB8F906FB} = {E0248296-25A5-42AF-8741-10FF40FE5777}
+		{151334BE-3124-4C7B-B38E-7F3F29A40920} = {57D6CCA7-277F-4DB0-8A5B-B49BC3037997}
+		{57D6CCA7-277F-4DB0-8A5B-B49BC3037997} = {19ACC646-EFBC-4C6A-ABD7-7542443E62C6}
+		{E0248296-25A5-42AF-8741-10FF40FE5777} = {19ACC646-EFBC-4C6A-ABD7-7542443E62C6}
+		{CDF926EC-4844-46CB-9FDB-E0210672831E} = {19ACC646-EFBC-4C6A-ABD7-7542443E62C6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B55E214-2A8B-49C6-BDA2-F11AFFF44CAE}
 	EndGlobalSection
 EndGlobal

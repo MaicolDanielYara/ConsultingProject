@@ -24,12 +24,12 @@ namespace ConsultingProject.Web
         {
             services.AddDbContext<ConsultingProjectDbContext>(options =>
                 options.UseMySQL(Configuration.GetConnectionString("ConsultingProjectConnection")));
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<AppIdentityDbContext>(options =>
                 options.UseMySQL(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
+                    Configuration.GetConnectionString("IdentityConnection")));
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddEntityFrameworkStores<AppIdentityDbContext>();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
            services.AddRazorPages();
         }
 

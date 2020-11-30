@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ConsultingProject.Infrastructure.Identity
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class AppIdentityDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options)
             : base(options)
         {
         }
