@@ -35,4 +35,9 @@
     <ProjectReference Include="..\ConsultingProject.Infrastructure\ConsultingProject.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\FontAwesome\" />
+    <Folder Include="wwwroot\Img\" />
+  </ItemGroup>
+
 </Project>
