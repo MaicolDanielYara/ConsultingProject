@@ -1,0 +1,17 @@
+﻿* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    margin: 0;
+    background-image: url(../Img/modo-web.JPG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-iniciarsesion {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    border-radius: 7px;
+}

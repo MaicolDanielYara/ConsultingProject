@@ -1,0 +1,57 @@
+﻿@model ConsultingProject.Core.Domain.Empresa
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Empresa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CódigoDepartamento" class="control-label"></label>
+                <select asp-for="CódigoDepartamento" class="form-control" asp-items="ViewBag.CódigoDepartamento"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CódigoMunicipio" class="control-label"></label>
+                <select asp-for="CódigoMunicipio" class="form-control" asp-items="ViewBag.CódigoMunicipio"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdSector" class="control-label"></label>
+                <select asp-for="IdSector" class="form-control" asp-items="ViewBag.IdSector"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdTamañoEmpresa" class="control-label"></label>
+                <select asp-for="IdTamañoEmpresa" class="form-control" asp-items="ViewBag.IdTamañoEmpresa"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdEje" class="control-label"></label>
+                <select asp-for="IdEje" class="form-control" asp-items="ViewBag.IdEje"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProyecto" class="control-label"></label>
+                <select asp-for="IdProyecto" class="form-control" asp-items="ViewBag.IdProyecto"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProfesional" class="control-label"></label>
+                <select asp-for="IdProfesional" class="form-control" asp-items="ViewBag.IdProfesional"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
