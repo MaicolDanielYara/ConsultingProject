@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3310
--- Tiempo de generación: 02-12-2020 a las 21:37:28
+-- Tiempo de generación: 03-12-2020 a las 20:53:43
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `consultingproject`
 --
+CREATE DATABASE IF NOT EXISTS `consultingproject` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `consultingproject`;
 
 -- --------------------------------------------------------
 
