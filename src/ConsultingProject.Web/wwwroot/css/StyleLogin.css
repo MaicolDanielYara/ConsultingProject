@@ -8,7 +8,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.form-iniciarsesion {
+.row {
+    justify-content:center;
     width: 90%;
     max-width: 900px;
     margin: auto;
@@ -32,7 +33,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-input {
+.input {
     margin-bottom: 15px;
     padding: 15px;
     font-size: 16px;

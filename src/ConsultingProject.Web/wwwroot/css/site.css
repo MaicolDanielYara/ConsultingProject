@@ -5,11 +5,12 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  background: #1b6ec2;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #1b6ec2;
 }
 
 .btn-primary {
@@ -19,7 +20,7 @@ a {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
+  color: #1b6ec2;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
@@ -68,4 +69,7 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+.nav-item{
+    background: #1b6ec2;
 }
