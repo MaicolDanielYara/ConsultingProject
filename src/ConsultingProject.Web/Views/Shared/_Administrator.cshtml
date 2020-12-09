@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "Administrator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (SignInManager.IsSignedIn(User))
+ {
+<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Empresa" asp-action="Index">Empresas</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Profesional" asp-action="Index">profesionales</a>
+</li>
+}
+
+<h1>Administrator</h1>
+

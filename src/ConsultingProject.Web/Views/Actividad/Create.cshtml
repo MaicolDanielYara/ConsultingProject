@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
+<h1>Crear Actividad</h1>
 
 <h4>Actividades</h4>
 <hr />
@@ -31,14 +31,15 @@
                 <select asp-for="IdProfesional" class ="form-control" asp-items="ViewBag.IdProfesional"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
+
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Ir a la Lista</a>
 </div>
 
 @section Scripts {

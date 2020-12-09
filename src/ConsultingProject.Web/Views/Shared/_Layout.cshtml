@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     @RenderSection("StyleAboutUs", false)
     @RenderSection("StyleLogin", false)
+    @RenderSection("Index", false)
 </head>
-<body>  
+<body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-blue border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ConsultingProject</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -23,13 +24,16 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Portafolio">Portafolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">Sobre Nosotros</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="AboutUs">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Contáctenos">Contáctenos</a>
                         </li>
                     </ul>
                 </div>
@@ -42,9 +46,12 @@
         </main>
     </div>
 
+
+    
+
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - ConsultingProject.web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+          <a>  &copy; 2020 - ConsultingProject.web - </a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

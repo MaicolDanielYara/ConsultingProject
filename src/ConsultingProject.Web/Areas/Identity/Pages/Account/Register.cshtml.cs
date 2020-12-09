@@ -46,6 +46,11 @@ namespace ConsultingProject.Web.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [StringLength(100)]
+            [Display(Name = "Nombre De Usuario")]
+            public string UserName{ get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }

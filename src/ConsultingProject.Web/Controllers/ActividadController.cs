@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ConsultingProject.Core.Domain;
 using ConsultingProject.Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ConsultingProject.Web.Controllers
 {
@@ -47,6 +48,7 @@ namespace ConsultingProject.Web.Controllers
             return View(actividades);
         }
 
+
         // GET: Actividades/Create
         public IActionResult Create()
         {
@@ -74,6 +76,7 @@ namespace ConsultingProject.Web.Controllers
             ViewData["IdProyecto"] = new SelectList(_context.Proyecto, "IdProyecto", "IdProyecto", actividades.IdProyecto);
             return View(actividades);
         }
+
 
         // GET: Actividades/Edit/5
         public async Task<IActionResult> Edit(string id)
@@ -131,6 +134,8 @@ namespace ConsultingProject.Web.Controllers
             ViewData["IdProyecto"] = new SelectList(_context.Proyecto, "IdProyecto", "IdProyecto", actividades.IdProyecto);
             return View(actividades);
         }
+
+
 
         // GET: Actividades/Delete/5
         public async Task<IActionResult> Delete(string id)

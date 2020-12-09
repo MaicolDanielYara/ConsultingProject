@@ -23,12 +23,17 @@ namespace ConsultingProject.Web.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Portafolio()
         {
             return View();
         }
 
         public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult Contáctenos()
         {
             return View();
         }
