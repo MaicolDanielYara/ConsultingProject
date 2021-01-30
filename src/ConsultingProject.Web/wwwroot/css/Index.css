@@ -4,6 +4,7 @@
     padding: 0;
     font-family: Helvetica;
 }
+
 .borde {
     border: 1px #FFF;
 }
@@ -16,10 +17,11 @@
     padding: 15px 5px;
     background: #1E90FF;
     color: #FFFFFF;
+    font-weight: bold;
     letter-spacing: 2px;
 }
 /*contenedor*/
-.container {
+.contenedor {
     width: 90%;
     max-width: 1280px;
     margin: auto;
@@ -37,6 +39,13 @@ nav {
     float: left;
 }
 
+.logo1 {
+    width: 30%;
+    height: 80%;
+    padding: 6px 15px;
+    display: inline-block;
+}
+
 .navegacion {
     width: 65%;
     height: 100%;
@@ -47,14 +56,15 @@ nav ul {
     list-style: none;
     text-align: right;
 }
-nav ul li {
+
+    nav ul li {
         font-size: 16px;
         width: 150px;
-}
+    }
 
-nav ul li:hover ul {
-   display: block;
-}
+        nav ul li:hover ul {
+            display: block;
+        }
 
         nav ul li a {
             display: block;
@@ -138,13 +148,25 @@ section#quienes-somos {
 .col-ext {
     width: 50%;
     height: 100%;
+    float: left;
     text-align: justify;
-    padding: 50px;
+    padding: 20px;
+}
+
+.quienes-image {
+    width: 100%;
+    height: 250px;
+    background-image: url("../img/foto_quienes_somos.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 p#quienes-somos {
     margin: 25px 50px 75px;
+    float: left;
 }
+
+
 /*contactenos*/
 section#contactenos {
     width: 100%;
@@ -199,3 +221,21 @@ footer {
     font-size: 12px;
 }
 
+button {
+    background-color: #1E90FF;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+    button a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+    }
+
+    button:hover {
+        background: rgba(0,0,0,.5);
+    }

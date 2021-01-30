@@ -1,2 +1,65 @@
 ﻿body {
 }
+/*contactenos*/
+section#contactenos {
+    width: 100%;
+    height: 400px;
+}
+
+.div-contacto {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 20px;
+}
+
+input#lname {
+    width: 90%;
+    height: 100%;
+    float: left;
+}
+
+textarea {
+    width: 90%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+section#redes-sociales {
+    width: 100%;
+    height: 70%;
+}
+
+.redes {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/*pie de pagina*/
+footer {
+    width: 100%;
+    height: 50%;
+}
+
+.div-footer {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 10px;
+    font-size: 12px;
+}
+
+button {
+    background-color: #1E90FF;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+}
