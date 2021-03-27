@@ -11,16 +11,22 @@
     <h4>Herramientas</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdHerramienta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdHerramienta)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Herramienta)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Herramienta)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.IdEjeNavigation)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.IdEjeNavigation.IdEje)
         </dd>
     </dl>

@@ -13,7 +13,15 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="IdEtapa" />
+            <div class="form-group">
+
+                <label asp-for="IdEtapa" class="control-label"></label>
+                <input asp-for="IdEtapa" class="form-control" />
+                <span asp-validation-for="IdEtapa" class="text-danger"></span>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="IdEtapa" />
+
+            </div>
             <div class="form-group">
                 <label asp-for="NombreEtapa" class="control-label"></label>
                 <input asp-for="NombreEtapa" class="form-control" />

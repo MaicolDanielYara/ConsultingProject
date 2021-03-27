@@ -11,16 +11,22 @@
     <h4>Eje Seleccionado</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdEje)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdEje)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Eje)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Eje)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.IdProyectoNavigation)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.IdProyectoNavigation.IdProyecto)
         </dd>
     </dl>

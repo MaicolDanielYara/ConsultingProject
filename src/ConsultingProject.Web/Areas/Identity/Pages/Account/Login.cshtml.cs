@@ -83,7 +83,7 @@ namespace ConsultingProject.Web.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
+                    return LocalRedirect("/Actividades/Index");
                 }
                 if (result.RequiresTwoFactor)
                 {
