@@ -11,10 +11,16 @@
     <h4>Tipo Documento</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdTipoDocumento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdTipoDocumento)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.TipoDeDocumento)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TipoDeDocumento)
         </dd>
     </dl>
