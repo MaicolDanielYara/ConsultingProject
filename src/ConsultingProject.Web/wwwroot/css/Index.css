@@ -65,15 +65,15 @@ nav ul {
         nav ul li:hover ul {
             display: block;
         }
-
-        nav ul li a {
+nav ul li a {
             display: block;
             text-decoration: none;
             color: #FFFFFF;
             font-weight: bold;
             text-align: center;
             padding: 15px 5px;
-        }
+
+}
 
             nav ul li a:hover {
                 background: rgba(0,0,0,.5);
@@ -229,13 +229,31 @@ button {
     font-size: 12px;
     cursor: pointer;
 }
-
-    button a {
+button a {
         text-decoration: none;
         color: white;
         font-size: 12px;
-    }
+}
 
     button:hover {
         background: rgba(0,0,0,.5);
     }
+.navbar-brand {
+    color: #ffff;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    background: #1b6ec2;
+}
+.box-shadow {
+    background-color: #1b6ec2;
+    box-shadow: 0 0.25rem 0.75rem;
+}
+.navbar-light .navbar-brand {
+    color: #FFF;
+}
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}

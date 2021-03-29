@@ -6,10 +6,10 @@
 }
 
 @section StyleLogin{
-    <link href="~/css/StyleLogin.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/StyleLogin.css" rel="stylesheet" />
+
  }
 
-<h1>@ViewData["Title"]</h1>
 <div class="row">
     <div class="col-md-4">
         <section>
@@ -22,12 +22,12 @@
 
                     <div asp-validation-summary="All" class="text-danger"></div>
                     <div class="form-group">
-                        <label asp-for="Input.Email">Correo Electrónico</label>
+                        <label asp-for="Input.Email" class="input-100">Correo Electrónico</label>
                         <input asp-for="Input.Email" class="form-control" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Input.Password">Contraseña</label>
+                        <label asp-for="Input.Password" class="input-100">Contraseña</label>
                         <input asp-for="Input.Password" class="form-control" />
                         <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
