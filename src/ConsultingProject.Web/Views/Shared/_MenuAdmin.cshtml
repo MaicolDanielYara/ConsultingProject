@@ -87,7 +87,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
+                        <h6 class="collapse-header">Acciones</h6>
                         <a class="collapse-item" asp-area="Identity" asp-page="/Account/Manage/Index">Editar Perfil</a>
 
                     </div>
@@ -95,24 +95,6 @@
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                   aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Tablas</h6>
-                        <a class="collapse-item" asp-area="" asp-controller="Cargo" asp-action="Index">Cargos</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -120,6 +102,41 @@
             <div class="sidebar-heading">
                 Administrar
             </div>
+
+            <!-- Proyectos -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProyectos"
+                   aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Proyecto</span>
+                </a>
+                <div id="collapseProyectos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones</h6>
+                        <a class="collapse-item" asp-area="" asp-controller="Proyecto" asp-action="Create">Crear Proyecto</a>
+                        <a class="collapse-item" asp-area="" asp-controller="Actividad" asp-action="Create">Crear Actividad</a>
+                        <a class="collapse-item" asp-area="" asp-controller="Etapa" asp-action="Create">Crear Etapa</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Empresas -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpresas"
+                   aria-expanded="true" aria-controls="collapsePages">
+                    <i class='fa fa-industry'></i>
+                    <span>Empresas</span>
+                </a>
+                <div id="collapseEmpresas" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones</h6>
+                        <a class="collapse-item" asp-area="" asp-controller="Empresa" asp-action="Index">Ver empresas</a>
+                        <a class="collapse-item" asp-area="" asp-controller="ContactoEmpresa" asp-action="index">Contacto de Emrpesas</a>
+                    </div>
+                </div>
+            </li>
+
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -155,6 +172,22 @@
                 </div>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                   aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    <span>Consultoría</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones</h6>
+                        <a class="collapse-item" href="utilities-border.html">Programar Cita</a>
+                        <a class="collapse-item" asp-area="" asp-controller="Home" asp-action="Estadísticas">Avances de Consultoría</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Estadísticas">
@@ -162,7 +195,7 @@
                     <span>Estadísticas</span>
                 </a>
             </li>
-            
+
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" asp-area="" asp-controller="Usuario" asp-action="Index">
