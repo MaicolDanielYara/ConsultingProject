@@ -1,0 +1,154 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MenuAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Innovation Shop</title>
+    <link href="~/css/reporte.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="borde content-cp">
+            <h3 align="center"> Avance consultoria</h3>
+
+            <div class="container">
+                <!-- DONUT CHART BLOCK (LEFT-CONTAINER) -->
+                <div class="donut-chart-block block">
+                    <h2 class="titular">AVANCE MES</h2>
+                    <div class="donut-chart">
+                        <!-- PORCIONES GRAFICO CIRCULAR
+                             ELIMINADO #donut-chart
+                             MODIFICADO CSS de .donut-chart -->
+                        <div id="porcion1" class="recorte"><div class="quesito ios" data-rel="21"></div></div>
+                        <div id="porcion2" class="recorte"><div class="quesito mac" data-rel="39"></div></div>
+                        <div id="porcion3" class="recorte"><div class="quesito win" data-rel="31"></div></div>
+                        <div id="porcionFin" class="recorte"><div class="quesito linux" data-rel="9"></div></div>
+                        <!-- FIN AÑADIDO GRÄFICO -->
+                        <p class="center-date">JUNIO<br><span class="scnd-font-color">2020</span></p>
+                    </div>
+                    <ul class="os-percentages horizontal-list">
+                        <li>
+                            <p class="ios os scnd-font-color">Incrip.</p>
+                            <p class="os-percentage">21<sup>%</sup></p>
+                        </li>
+                        <li>
+                            <p class="mac os scnd-font-color">Reu Inicial</p>
+                            <p class="os-percentage">50<sup>%</sup></p>
+                        </li>
+                        <li>
+                            <p class="linux os scnd-font-color">Herramienta</p>
+                            <p class="os-percentage">30<sup>%</sup></p>
+                        </li>
+                        <li>
+                            <p class="win os scnd-font-color">PDT</p>
+                            <p class="os-percentage">20<sup>%</sup></p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- LINE CHART BLOCK (LEFT-CONTAINER) -->
+                <div class="line-chart-block block">
+                    <div class="line-chart">
+                        <div class='grafico'>
+                            <ul class='eje-y'>
+                                <li data-ejeY='30'></li>
+                                <li data-ejeY='20'></li>
+                                <li data-ejeY='10'></li>
+                                <li data-ejeY='0'></li>
+                            </ul>
+                            <ul class='eje-x'>
+                                <li>Abril</li>
+                                <li>Mayo</li>
+                                <li>Junio</li>
+                            </ul>
+                            <span data-valor='25'>
+                                <span data-valor='8'>
+                                    <span data-valor='13'>
+                                        <span data-valor='5'>
+                                            <span data-valor='23'>
+                                                <span data-valor='12'>
+                                                    <span data-valor='15'>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+
+                    </div>
+                    <ul class="time-lenght horizontal-list">
+                        <li><a class="time-lenght-btn" href="#14">Semana</a></li>
+                        <li><a class="time-lenght-btn" href="#15">Mes</a></li>
+
+                    </ul>
+                    <ul class="month-data clear">
+                        <li>
+                            <p>ABRIL<span class="scnd-font-color"> 2020</span></p>
+                            <p><span class="entypo-plus increment"> </span>21<sup>%</sup></p>
+                        </li>
+                        <li>
+                            <p>MAYO<span class="scnd-font-color"> 2020</span></p>
+                            <p><span class="entypo-plus increment"> </span>48<sup>%</sup></p>
+                        </li>
+                        <li>
+                            <p>JUNIO<span class="scnd-font-color"> 2020</span></p>
+                            <p><span class="entypo-plus increment"> </span>35<sup>%</sup></p>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <div class="bar-chart-block block">
+                    <h2 class='titular'> Avance por Empresa <span>*1000</span></h2>
+                    <div class='grafico bar-chart'>
+                        <ul class='eje-y'>
+                            <li data-ejeY='60'></li>
+                            <li data-ejeY='45'></li>
+                            <li data-ejeY='30'></li>
+                            <li data-ejeY='15'></li>
+                            <li data-ejeY='0'></li>
+                        </ul>
+                        <ul class='eje-x'>
+                            <li data-ejeX='37'><i>Andescol</i></li>
+                            <li data-ejeX='56'><i>Spity</i></li>
+                            <li data-ejeX='25'><i>Pacoa</i></li>
+                            <li data-ejeX='18'><i>Corales</i></li>
+                            <li data-ejeX='45'><i>IBM</i></li>
+                            <li data-ejeX='50'><i>Apple</i></li>
+                            <li data-ejeX='33'><i>Seletti</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
+

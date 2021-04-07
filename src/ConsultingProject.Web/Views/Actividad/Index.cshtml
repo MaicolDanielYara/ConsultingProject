@@ -1,11 +1,15 @@
-﻿@model IEnumerable<ConsultingProject.Core.Domain.Actividades>
+﻿
+
+@model IEnumerable<ConsultingProject.Core.Domain.Actividades>
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_MenuAdmin.cshtml";
 }
 
-<h1>Index</h1>
+
+<p></p>
+<h1>Contenido de Actividades</h1>
 
 <p>
     <a asp-action="Create">Crear Nuevo</a>
@@ -32,29 +36,33 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NombreActividad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DescripcionActividad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdEtapaNavigation.IdEtapa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdProfesionalNavigation.IdProfesional)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdProyectoNavigation.IdProyecto)
-            </td>
-            <td>
-                <button></button><a asp-action="Edit" asp-route-id="@item.IdActividad">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.IdActividad">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdActividad">Eliminar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreActividad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescripcionActividad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdEtapaNavigation.IdEtapa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdProfesionalNavigation.IdProfesional)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdProyectoNavigation.IdProyecto)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdActividad">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdActividad">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdActividad">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+
+
