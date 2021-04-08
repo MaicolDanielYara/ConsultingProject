@@ -16,19 +16,19 @@
             <div class="form-group">
 
                 <label asp-for="CódigoMunicipio" class="control-label"></label>
-                <input asp-for="CódigoMunicipio" class="form-control" />
+                <input asp-for="CódigoMunicipio" class="form-control" required />
                 <span asp-validation-for="CódigoMunicipio" class="text-danger"></span>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="CódigoMunicipio" />
+                <input type="hidden" asp-for="CódigoMunicipio" required />
             </div>
             <div class="form-group">
                 <label asp-for="NombreMunicipio" class="control-label"></label>
-                <input asp-for="NombreMunicipio" class="form-control" />
+                <input asp-for="NombreMunicipio" class="form-control" required />
                 <span asp-validation-for="NombreMunicipio" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CódigoDepartamento" class="control-label"></label>
-                <select asp-for="CódigoDepartamento" class="form-control" asp-items="ViewBag.CódigoDepartamento"></select>
+                <select asp-for="CódigoDepartamento" class="form-control" asp-items="ViewBag.CódigoDepartamento" required></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Crear" class="btn btn-primary" />

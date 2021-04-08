@@ -1,0 +1,317 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica;
+}
+.borde{
+	border: 1px #FFF;
+}
+
+.contenedor{
+	width: 90%;
+	max-width: 1280px;
+	margin: auto;
+}
+
+nav{
+	width: 100%;
+	height: 50px;
+	background:#1E90FF;
+}
+.logo{
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+.logo1{
+	width: 30%;
+	height: 80%;
+	padding: 6px 15px;
+	display: inline-block;
+}
+.navegacion{
+	width: 65%;
+	height: 100%;
+	float: left;
+}
+/*nivel 0*/
+nav ul{
+	list-style: none;
+	text-align: right;
+}
+nav ul li{
+	font-size: 16px;
+	width: 150px;
+} 
+nav ul li:hover ul{
+	display: block;	
+}
+nav ul li a{
+	display: block;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	padding: 15px 5px;
+}
+nav ul li a:hover{
+	background:rgba(0,0,0,.5);
+}
+
+.ingreso{
+	width: 15%;
+	height: 100%;
+	float: left;
+}
+nav .ingreso ul li{
+	width: 100%
+}
+
+nav li ul{
+	position: absolute;
+	display: none;
+}
+
+nav .navegacion>ul>li{
+	display: inline-block;
+}
+
+nav .ingreso li ul{
+	width: 15%;
+}
+
+section#cp-space{
+	width: 100%;
+	height: 800px;
+}
+
+.menu-cp{
+	width: 200px;
+	height: 800px;
+	float: left;
+}
+
+.perfil{
+	width: 200px;
+	height: 200px;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatar {
+  padding-top: 30px;
+}
+
+button {
+  background-color: #1E90FF;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button a{
+	text-decoration: none;
+	color: white;
+	font-size: 12px;
+}
+
+button:hover{
+	background:rgba(0,0,0,.5);
+}
+
+.sidenav {
+	height: 600px;
+	width: 200px;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #1E90FF;
+	overflow-x: hidden;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 16px;
+	color: #FFFFFF;
+	display: block;
+	border: none;
+	background: none;
+	width:100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+	background:rgba(0,0,0,.5);
+}
+
+/* Main content */
+.main {
+	margin-left: 200px; /* Same as the width of the sidenav */
+	font-size: 20px; /* Increased text to enable scrolling */
+	padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+	background-color: #1E90FF;
+	color: white;
+	background:rgba(0,0,0,.5);
+}
+
+.dropdown-container {
+	display: none;
+	background-color: #1E90FF;
+	padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+	float: right;
+	padding-right: 8px;
+}
+
+.content-cp{
+	width: 100%;
+	height: 800px;
+	padding-top: 100px;
+	padding-left: 150px;
+	padding-right: 100px;
+}
+
+.form-titulo{
+	color: #000;
+	padding: 10px;
+	text-align: center;
+	font-weight: 100px;
+	font-size: 20px;
+}
+.form-registro{
+	width: 90%;
+	max-width: 500px;
+	margin: auto;
+	background: #fff;
+	border-radius: 7px;
+}
+
+.cont-inputs{
+	padding: 10px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+input{
+	margin-bottom: 15px;
+	padding: 15px;
+	font-size: 16px;
+	border-radius: 3px;
+	border: 1px solid #6E6E6E;
+}
+
+.input-1000{
+	width: 100%;
+	margin-bottom: 15px;
+	padding: 15px;
+	font-size: 15px;
+	border-radius: 3px;
+	border: 1px solid #6E6E6E;
+}
+
+.input-50{
+	width: 48%;
+	margin-bottom: 15px;
+	padding: 15px;
+	font-size: 15px;
+	border-radius: 3px;
+	border: 1px solid #6E6E6E;
+}
+
+.input-100{
+	width: 100%;
+}
+
+h3{
+	color: #000;
+	font-size: 15px;
+	text-align: left;
+}
+
+h4{
+	color: #000;
+	font-size: 15px;
+	text-align: center;
+}
+
+.input-25{
+	width: 5%;
+}
+
+.btn-enviar{
+	background: #FF8000;
+	color: #000;
+	margin: auto;
+	padding: 10px 40px;
+	font-size: 20px;
+	cursor: pointer;
+	border-radius: 7px;
+}
+
+.btn-enviar:active{
+	transform: scale(1.05);
+	font-weight: bold;
+}
+
+.btn-cancelar{
+	background: #FF8000;
+	color: #000;
+	margin: auto;
+	padding: 10px 40px;
+	font-size: 20px;
+	cursor: pointer;
+	border-radius: 7px;
+}
+
+.btn-cancelar:active{
+	transform: scale(1.05);	
+}
+
+.form-link{
+	width: 100%;
+	margin: 7px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.menu{
+	list-style: none;
+	padding: 0;
+	background: 008FFF;
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+}
+.menu li a{
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	display: block;
+}
+
+.menu li{
+	display: inline-block;
+	text-align: center;
+}
+
+.menu li a:hover{
+	background: #ef8354;
+}
+

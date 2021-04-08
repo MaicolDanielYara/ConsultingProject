@@ -16,14 +16,14 @@
             <div class="form-group">
 
                 <label asp-for="IdProfesion" class="control-label"></label>
-                <input asp-for="IdProfesion" class="form-control" />
+                <input asp-for="IdProfesion" class="form-control" required />
                 <span asp-validation-for="IdProfesion" class="text-danger"></span>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="IdProfesion" />
+                <input type="hidden" asp-for="IdProfesion" required />
             </div>
             <div class="form-group">
                 <label asp-for="Profesion" class="control-label"></label>
-                <input asp-for="Profesion" class="form-control" />
+                <input asp-for="Profesion" class="form-control" required />
                 <span asp-validation-for="Profesion" class="text-danger"></span>
             </div>
             <div class="form-group">

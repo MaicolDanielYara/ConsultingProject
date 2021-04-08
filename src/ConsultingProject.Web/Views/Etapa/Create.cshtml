@@ -16,25 +16,25 @@
             <div class="form-group">
 
                 <label asp-for="IdEtapa" class="control-label"></label>
-                <input asp-for="IdEtapa" class="form-control" />
+                <input asp-for="IdEtapa" class="form-control"  required/>
                 <span asp-validation-for="IdEtapa" class="text-danger"></span>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="IdEtapa" />
+                <input type="hidden" asp-for="IdEtapa"  required/>
 
             </div>
             <div class="form-group">
                 <label asp-for="NombreEtapa" class="control-label"></label>
-                <input asp-for="NombreEtapa" class="form-control" />
+                <input asp-for="NombreEtapa" class="form-control" required />
                 <span asp-validation-for="NombreEtapa" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DescripcionEtapa" class="control-label"></label>
-                <input asp-for="DescripcionEtapa" class="form-control" />
+                <input asp-for="DescripcionEtapa" class="form-control"  required/>
                 <span asp-validation-for="DescripcionEtapa" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="IdProyecto" class="control-label"></label>
-                <select asp-for="IdProyecto" class="form-control" asp-items="ViewBag.IdProyecto"></select>
+                <select asp-for="IdProyecto" class="form-control" asp-items="ViewBag.IdProyecto" required></select>
                 <span asp-validation-for="IdProyecto" class="text-danger"></span>
             </div>
             <div class="form-group">

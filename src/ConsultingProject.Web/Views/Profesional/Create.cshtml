@@ -16,59 +16,59 @@
             <div class="form-group">
 
                 <label asp-for="IdProfesional" class="control-label"></label>
-                <input asp-for="IdProfesional" class="form-control" />
+                <input asp-for="IdProfesional" class="form-control" required />
                 <span asp-validation-for="IdProfesional" class="text-danger"></span>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="IdProfesional" />
             </div>
             <div class="form-group">
                 <label asp-for="Nombres" class="control-label"></label>
-                <input asp-for="Nombres" class="form-control" />
+                <input asp-for="Nombres" class="form-control" required />
                 <span asp-validation-for="Nombres" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Apellidos" class="control-label"></label>
-                <input asp-for="Apellidos" class="form-control" />
+                <input asp-for="Apellidos" class="form-control" required />
                 <span asp-validation-for="Apellidos" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="IdTipoDocumento" class="control-label"></label>
-                <select asp-for="IdTipoDocumento" class="form-control" asp-items="ViewBag.IdTipoDocumento"></select>
+                <select asp-for="IdTipoDocumento" class="form-control" asp-items="ViewBag.IdTipoDocumento" required></select>
             </div>
             <div class="form-group">
                 <label asp-for="NoDocumento" class="control-label"></label>
-                <input asp-for="NoDocumento" class="form-control" />
+                <input asp-for="NoDocumento" class="form-control" required />
                 <span asp-validation-for="NoDocumento" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Correo" class="control-label"></label>
-                <input asp-for="Correo" class="form-control" />
+                <input asp-for="Correo" class="form-control" required />
                 <span asp-validation-for="Correo" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Telefono" class="control-label"></label>
-                <input asp-for="Telefono" class="form-control" />
+                <input asp-for="Telefono" class="form-control" required />
                 <span asp-validation-for="Telefono" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="IdProfesion" class="control-label"></label>
-                <select asp-for="IdProfesion" class="form-control" asp-items="ViewBag.IdProfesion"></select>
+                <select asp-for="IdProfesion" class="form-control" asp-items="ViewBag.IdProfesion" required></select>
             </div>
             <div class="form-group">
                 <label asp-for="IdEstudio" class="control-label"></label>
-                <select asp-for="IdEstudio" class="form-control" asp-items="ViewBag.IdEstudio"></select>
+                <select asp-for="IdEstudio" class="form-control" asp-items="ViewBag.IdEstudio" required></select>
             </div>
             <div class="form-group">
                 <label asp-for="IdCargo" class="control-label"></label>
-                <select asp-for="IdCargo" class="form-control" asp-items="ViewBag.IdCargo"></select>
+                <select asp-for="IdCargo" class="form-control" asp-items="ViewBag.IdCargo" required></select>
             </div>
             <div class="form-group">
                 <label asp-for="IdProyecto" class="control-label"></label>
-                <select asp-for="IdProyecto" class="form-control" asp-items="ViewBag.IdProyecto"></select>
+                <select asp-for="IdProyecto" class="form-control" asp-items="ViewBag.IdProyecto" required></select>
             </div>
             <div class="form-group">
                 <label asp-for="IdEje" class="control-label"></label>
-                <select asp-for="IdEje" class="form-control" asp-items="ViewBag.IdEje"></select>
+                <select asp-for="IdEje" class="form-control" asp-items="ViewBag.IdEje" required></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Crear" class="btn btn-primary" />

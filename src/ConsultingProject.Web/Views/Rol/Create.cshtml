@@ -16,19 +16,19 @@
             <div class="form-group">
 
                 <label asp-for="IdRol" class="control-label"></label>
-                <input asp-for="IdRol" class="form-control" />
+                <input asp-for="IdRol" class="form-control" required/>
                 <span asp-validation-for="IdRol" class="text-danger"></span>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="IdRol" />
+                <input type="hidden" asp-for="IdRol"  required />
             </div>
             <div class="form-group">
                 <label asp-for="NombreRol" class="control-label"></label>
-                <input asp-for="NombreRol" class="form-control" />
+                <input asp-for="NombreRol" class="form-control" required />
                 <span asp-validation-for="NombreRol" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DescripciónRol" class="control-label"></label>
-                <input asp-for="DescripciónRol" class="form-control" />
+                <input asp-for="DescripciónRol" class="form-control" required />
                 <span asp-validation-for="DescripciónRol" class="text-danger"></span>
             </div>
             <div class="form-group">

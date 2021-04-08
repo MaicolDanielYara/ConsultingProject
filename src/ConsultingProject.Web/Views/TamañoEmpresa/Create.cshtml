@@ -16,14 +16,14 @@
             <div class="form-group">
 
                 <label asp-for="IdTamañoEmpresa" class="control-label"></label>
-                <input asp-for="IdTamañoEmpresa" class="form-control" />
+                <input asp-for="IdTamañoEmpresa" class="form-control" required/>
                 <span asp-validation-for="IdTamañoEmpresa" class="text-danger"></span>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="IdTamañoEmpresa" />
             </div>
             <div class="form-group">
                 <label asp-for="TamañoEmpresa1" class="control-label"></label>
-                <input asp-for="TamañoEmpresa1" class="form-control" />
+                <input asp-for="TamañoEmpresa1" class="form-control" required />
                 <span asp-validation-for="TamañoEmpresa1" class="text-danger"></span>
             </div>
             <div class="form-group">

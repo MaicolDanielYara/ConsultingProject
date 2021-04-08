@@ -16,15 +16,15 @@
             <div class="form-group">
 
                 <label asp-for="IdEstudio" class="control-label"></label>
-                <input asp-for="IdEstudio" class="form-control" />
+                <input asp-for="IdEstudio" class="form-control"  required/>
                 <span asp-validation-for="IdEstudio" class="text-danger"></span>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="IdEstudio" />
+                <input type="hidden" asp-for="IdEstudio" required />
 
             </div>
             <div class="form-group">
                 <label asp-for="Estudio" class="control-label"></label>
-                <input asp-for="Estudio" class="form-control" />
+                <input asp-for="Estudio" class="form-control" required />
                 <span asp-validation-for="Estudio" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MenuAdmin.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Innovation Shop</title>
+    <link href="~/css/programar_consultoria.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form action="#" method="post" class="form-registro" onsubmit="return">
+        <h2 class="form-titulo">Programar cita</h2>
+        <div class="cont-inputs">
+            <!-- Empresa -->
+            <input type="text" name="Empresa" placeholder="Empresa" class="input-1000" required>
+            <select name="Asunto" class="input-1000">
+                <option disabled="Seleccione una opcion">Seleccione una opción</option>
+                <option value="Reunion inicial">Asunto</option>
+                <option value="ri">Reunion inicial</option>
+                <option value="ah">Aplicacion herramienta</option>
+                <option value="PDT">Reunion PDT</option>
+                <option value="resultados">Informe y resultados </option>
+            </select>
+            <!--Numero de Id-->
+            <!--Telefono y Correo-->
+            <input type="date" name="Telefono Celular" placeholder=" 3214567890" class="input-50" required>
+            <input type="time" name="hora" placeholder="9:00:00 a.m" class="input-50">
+            <input type="text" name="Lugar" placeholder="lugar" class="input-100">
+            <!--Tipo de Usuario-->
+            <h5>Invitar</h5>
+            <input type="mail" name="correo" placeholder="mail@mail.com" class="input-100" required>
+            <script>
+                function alerta() {
+                    alert("invitación Enviada");
+                }
+
+
+            </script>
+            <button type="button" class="input-50" value="Volver" asp-area="" asp-controller="Home" asp-action="CitaConsultoria">Volver</button>
+            <button type="button" onclick="alerta()" class="input-50" value="Enviar">Enviar Invitación</button>
+
+            <!--Links-->
+            <!-- Aceptar -->
+        </div>
+    </form>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
