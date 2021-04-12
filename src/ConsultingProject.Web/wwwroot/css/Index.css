@@ -156,6 +156,13 @@ section#quienes-somos {
 .quienes-image {
     width: 100%;
     height: 250px;
+    background-image: url('file:///C:\ConsultingProject\src\ConsultingProject.Web\wwwroot\Img\logo_CP.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Cp-image {
+    width: 100%;
+    height: 250px;
     background-image: url("../img/foto_quienes_somos.jpg");
     background-position: center;
     background-repeat: no-repeat;
