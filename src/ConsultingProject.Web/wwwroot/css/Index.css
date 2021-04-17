@@ -128,7 +128,7 @@ header#imparables {
 
 main#portafolio {
     width: 100%;
-    height: 400px;
+    min-height: calc(100vh);
 }
 
 .div-portafolio {
@@ -212,6 +212,7 @@ section#redes-sociales {
     width: 100%;
     height: 100%;
     padding: 20px;
+    text-align: left;
 }
 
 /*pie de pagina*/

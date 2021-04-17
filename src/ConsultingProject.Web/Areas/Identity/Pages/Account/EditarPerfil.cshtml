@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil - ConsultingProject.Web</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/Estilonav.css" rel="stylesheet" />
+    <link href="~/css/Index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-blue border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="/">ConsultingProject</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" title="Manage" href="/Actividad">AdminPage myarag17@gmail.com!</a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="form-inline" action="/Identity/Account/Logout?returnUrl=%2F" method="post">
+                                <button type="submit" class="nav-link btn btn-link text-white">Cerrar Sesion</button>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8FAZb5nltaVHtoixnoTc19ZLRNJGnn8e3cFMNJlF5jHfFghZgbz8Dxet13UTqQ86pkoMM63gXSCZ1oMLXkv5jQo3HJjebMDe86vJlJV4tT9x_NgJ1_FaNLuwkLXmHmcpSWiyUfKJ-9c_PHjVlmE_DxQqJlSffJ1vc7GO-KDxfwjUncnJTiIA-4C3OJnCWdTY4Q" />
+                            </form>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/Home/Portafolio">Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/Home/AboutUs">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/Home/Cont%C3%A1ctenos">Contáctenos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+
+            <h2>Gestiona tu Cuenta</h2>
+
+            <div>
+                <h4>Cambiar la configuración de la Cuenta</h4>
+                <hr />
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item"><a class="nav-link active" id="profile" href="/Identity/Account/Manage">Perfil</a></li>
+                            <li class="nav-item"><a class="nav-link" id="email" href="/Identity/Account/Manage/Email">Email</a></li>
+                            <li class="nav-item"><a class="nav-link" id="change-password" href="/Identity/Account/Manage/ChangePassword">Cambiar Contraseña</a></li>
+                            <li class="nav-item"><a class="nav-link" id="two-factor" href="/Identity/Account/Manage/TwoFactorAuthentication">Confirmar Cuenta</a></li>
+                            <li class="nav-item"><a class="nav-link" id="personal-data" href="/Identity/Account/Manage/PersonalData">Información Personal</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-9">
+
+                        <h4>Perfil</h4>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form id="profile-form" method="post">
+                                    <div class="text-danger validation-summary-valid" data-valmsg-summary="true">
+                                        <ul>
+                                            <li style="display:none"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Username">Nombre de Usuario</label>
+                                        <input class="form-control" disabled type="text" id="Username" name="Username" value="myarag17@gmail.com" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Input_PhoneNumber">Número de Télefono</label>
+                                        <input class="form-control" type="tel" data-val="true" data-val-phone="The Phone number field is not a valid phone number." id="Input_PhoneNumber" name="Input.PhoneNumber" value="" />
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="Input.PhoneNumber" data-valmsg-replace="true"></span>
+                                    </div>
+                                    <button id="update-profile-button" type="submit" class="btn btn-primary">Guardar</button>
+                                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8FAZb5nltaVHtoixnoTc19ZLRNJGnn8e3cFMNJlF5jHfFghZgbz8Dxet13UTqQ86pkoMM63gXSCZ1oMLXkv5jQo3HJjebMDe86vJlJV4tT9x_NgJ1_FaNLuwkLXmHmcpSWiyUfKJ-9c_PHjVlmE_DxQqJlSffJ1vc7GO-KDxfwjUncnJTiIA-4C3OJnCWdTY4Q" />
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <script src="/lib/jquery/dist/jquery.min.js"></script>
+            <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js" crossorigin="anonymous" integrity="sha384-rZfj/ogBloos6wzLGpPkkOr/gpkBNLZ6b6yLy4o+ok+t/SAKlL5mvXLr0OXNi1Hp">
+            </script>
+            <script>(window.jQuery && window.jQuery.validator||document.write("\u003Cscript src=\u0022/Identity/lib/jquery-validation/dist/jquery.validate.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-rZfj/ogBloos6wzLGpPkkOr/gpkBNLZ6b6yLy4o\u002Bok\u002Bt/SAKlL5mvXLr0OXNi1Hp\u0022\u003E\u003C/script\u003E"));</script>
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.9/jquery.validate.unobtrusive.min.js" crossorigin="anonymous" integrity="sha384-ifv0TYDWxBHzvAk2Z0n8R434FL1Rlv/Av18DXE43N/1rvHyOG4izKst0f2iSLdds">
+            </script>
+            <script>(window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive||document.write("\u003Cscript src=\u0022/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-ifv0TYDWxBHzvAk2Z0n8R434FL1Rlv/Av18DXE43N/1rvHyOG4izKst0f2iSLdds\u0022\u003E\u003C/script\u003E"));</script>
+</body>
+</html>

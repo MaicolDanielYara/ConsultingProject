@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ConsultingProject.Infrastructure.Data;
 using ConsultingProject.Infrastructure.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ConsultingProject.Web
 {
@@ -28,8 +29,15 @@ namespace ConsultingProject.Web
                 options.UseMySQL(
                     Configuration.GetConnectionString("IdentityConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<AppIdentityDbContext>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddMvc(options =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                .RequireAuthenticatedUser()
+                .Build();
+            });
            services.AddRazorPages();
         }
 

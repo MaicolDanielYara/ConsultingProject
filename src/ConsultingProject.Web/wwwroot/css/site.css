@@ -75,3 +75,10 @@ body {
 .nav-link active {
     color: #ffffff
 }
+.div-footer {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 10px;
+    font-size: 12px;
+}
