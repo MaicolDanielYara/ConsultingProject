@@ -1,4 +1,5 @@
 ﻿
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,74 +104,162 @@
                 Administrar
             </div>
 
+            <!-- Panel de Admin -->
+
+            @if (User.IsInRole("Administrador"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProyectos"
+                       aria-expanded="true" aria-controls="collapsePages">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Proyecto</span>
+                    </a>
+                    <div id="collapseProyectos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Acciones</h6>
+                            <a class="collapse-item" asp-area="" asp-controller="Proyecto" asp-action="Index">Lista de Proyectos</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Proyecto" asp-action="Create">Crear Proyecto</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Actividad" asp-action="Create">Crear Actividad</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Etapa" asp-action="Create">Crear Etapa</a>
+                        </div>
+                    </div>
+                </li>
+
+            }
+
+            <!-- Panel de Profesional -->
+
+            @if (User.IsInRole("Profesional"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProyectos"
+                       aria-expanded="true" aria-controls="collapsePages">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Proyecto</span>
+                    </a>
+                    <div id="collapseProyectos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Acciones</h6>
+                            <a class="collapse-item" asp-area="" asp-controller="Proyecto" asp-action="Index">Lista de Proyectos</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Proyecto" asp-action="Create">Crear Proyecto</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Actividad" asp-action="Create">Crear Actividad</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Etapa" asp-action="Create">Crear Etapa</a>
+                        </div>
+                    </div>
+                </li>
+            }
+            @if (User.IsInRole("Consultor"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProyectos"
+                       aria-expanded="true" aria-controls="collapsePages">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Proyecto</span>
+                    </a>
+                    <div id="collapseProyectos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Acciones</h6>
+                            <a class="collapse-item" asp-area="" asp-controller="Proyecto" asp-action="Index">Lista de Proyectos</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Actividad" asp-action="Index">Lista de Actividades</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Etapa" asp-action="Index">Lista de Etapas</a>
+                        </div>
+                    </div>
+                </li>
+            }
             <!-- Proyectos -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProyectos"
-                   aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Proyecto</span>
-                </a>
-                <div id="collapseProyectos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Acciones</h6>
-                        <a class="collapse-item" asp-area="" asp-controller="Proyecto" asp-action="Create">Crear Proyecto</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Actividad" asp-action="Create">Crear Actividad</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Etapa" asp-action="Create">Crear Etapa</a>
-                    </div>
-                </div>
-            </li>
-
             <!-- Empresas -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpresas"
-                   aria-expanded="true" aria-controls="collapsePages">
-                    <i class='fa fa-industry'></i>
-                    <span>Empresas</span>
-                </a>
-                <div id="collapseEmpresas" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Acciones</h6>
-                        <a class="collapse-item" asp-area="" asp-controller="Empresa" asp-action="Index">Ver empresas</a>
-                        <a class="collapse-item" asp-area="" asp-controller="ContactoEmpresa" asp-action="index">Contacto de Emrpesas</a>
+            @if (User.IsInRole("Administrador"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpresas"
+                       aria-expanded="true" aria-controls="collapsePages">
+                        <i class='fa fa-industry'></i>
+                        <span>Empresas</span>
+                    </a>
+                    <div id="collapseEmpresas" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Acciones</h6>
+                            <a class="collapse-item" asp-area="" asp-controller="Empresa" asp-action="Index">Ver empresas</a>
+                            <a class="collapse-item" asp-area="" asp-controller="ContactoEmpresa" asp-action="index">Contacto de Emrpesas</a>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
+            }
 
+            @if (User.IsInRole("Profesional"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpresas"
+                       aria-expanded="true" aria-controls="collapsePages">
+                        <i class='fa fa-industry'></i>
+                        <span>Empresas</span>
+                    </a>
+                    <div id="collapseEmpresas" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Acciones</h6>
+                            <a class="collapse-item" asp-area="" asp-controller="Empresa" asp-action="Index">Ver empresas</a>
+                            <a class="collapse-item" asp-area="" asp-controller="ContactoEmpresa" asp-action="index">Contacto de Emrpesas</a>
+                        </div>
+                    </div>
+                </li>
+            }
+            @if (User.IsInRole("Consultor"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmpresas"
+                       aria-expanded="true" aria-controls="collapsePages">
+                        <i class='fa fa-industry'></i>
+                        <span>Empresas</span>
+                    </a>
+                    <div id="collapseEmpresas" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Acciones</h6>
+                            <a class="collapse-item" asp-area="" asp-controller="Empresa" asp-action="Index">Ver empresas</a>
+                            <a class="collapse-item" asp-area="" asp-controller="ContactoEmpresa" asp-action="index">Contacto de Emrpesas</a>
+                        </div>
+                    </div>
+                </li>
+            }
+
+
+            @if (User.IsInRole("Administrador"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                       aria-expanded="true" aria-controls="collapsePages">
+                        <i class='fa fa-table'></i>
+                        <span>Tablas</span>
+                    </a>
+                    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Listado</h6>
+                            <a class="collapse-item" asp-area="" asp-controller="Actividad" asp-action="Index">Actividades</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Cargo" asp-action="Index">Cargos</a>
+                            <a class="collapse-item" asp-area="" asp-controller="ContactoEmpresa" asp-action="Index">Contacto de Empresas</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Departamento" asp-action="Index">Departamentos</a>
+                            <a class="collapse-item" asp-area="" asp-controller="EjeSeleccionado" asp-action="Index">Ejes Seleccionados</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Empresa" asp-action="Index">Empresa</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Estudio" asp-action="Index">Estudios</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Etapa" asp-action="Index">Etapas</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Herramienta" asp-action="Index">Herramientas</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Municipio" asp-action="Index">Municipios</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Profesion" asp-action="Index">Profesiones</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Profesional" asp-action="Index">Profesionales</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Proyecto" asp-action="Index">Proyectos</a>
+                            <a class="collapse-item" asp-area="" asp-controller="RepresentanteLegal" asp-action="Index">Representante Legal</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Rol" asp-action="Index">Roles</a>
+                            <a class="collapse-item" asp-area="" asp-controller="Sector" asp-action="Index">Sectores</a>
+                            <a class="collapse-item" asp-area="" asp-controller="TamañoEmpresa" asp-action="Index">Tamaño de Empresas</a>
+                            <a class="collapse-item" asp-area="" asp-controller="TipoDocumento" asp-action="Index">Tipo de Documento</a>
+
+
+                        </div>
+                    </div>
+                </li>
+            }
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                   aria-expanded="true" aria-controls="collapsePages">
-                    <i class='fa fa-table'></i>
-                    <span>Tablas</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Listado</h6>
-                        <a class="collapse-item" asp-area="" asp-controller="Actividad" asp-action="Index">Actividades</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Cargo" asp-action="Index">Cargos</a>
-                        <a class="collapse-item" asp-area="" asp-controller="ContactoEmpresa" asp-action="Index">Contacto de Empresas</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Departamento" asp-action="Index">Departamentos</a>
-                        <a class="collapse-item" asp-area="" asp-controller="EjeSeleccionado" asp-action="Index">Ejes Seleccionados</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Empresa" asp-action="Index">Empresa</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Estudio" asp-action="Index">Estudios</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Etapa" asp-action="Index">Etapas</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Herramienta" asp-action="Index">Herramientas</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Municipio" asp-action="Index">Municipios</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Profesion" asp-action="Index">Profesiones</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Profesional" asp-action="Index">Profesionales</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Proyecto" asp-action="Index">Proyectos</a>
-                        <a class="collapse-item" asp-area="" asp-controller="RepresentanteLegal" asp-action="Index">Representante Legal</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Rol" asp-action="Index">Roles</a>
-                        <a class="collapse-item" asp-area="" asp-controller="Sector" asp-action="Index">Sectores</a>
-                        <a class="collapse-item" asp-area="" asp-controller="TamañoEmpresa" asp-action="Index">Tamaño de Empresas</a>
-                        <a class="collapse-item" asp-area="" asp-controller="TipoDocumento" asp-action="Index">Tipo de Documento</a>
 
-
-                    </div>
-                </div>
-            </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
@@ -195,16 +284,16 @@
                     <span>Estadísticas</span>
                 </a>
             </li>
-
+            @if (User.IsInRole("Administrador"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Usuario" asp-action="Index">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span>Administrar Usuarios</span>
+                    </a>
+                </li>
+            }
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Usuario" asp-action="Index">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    <span>Administrar Usuarios</span>
-                </a>
-            </li>
-
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -287,7 +376,6 @@
     <script src="~/js/sb-admin-2.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
-
 </body>
 
 </html>

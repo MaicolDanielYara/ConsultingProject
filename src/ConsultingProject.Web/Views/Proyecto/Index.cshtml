@@ -7,9 +7,19 @@
 
 <h1>Contenido de Proyectos</h1>
 
-<p>
-    <a asp-action="Create">Crear Nuevo</a>
-</p>
+@if (User.IsInRole("Administrador"))
+{
+    <p>
+        <a asp-action="Create">Crear Nuevo</a>
+    </p>
+}
+@if (User.IsInRole("Profesional"))
+{
+    <p>
+        <a asp-action="Create">Crear Nuevo</a>
+    </p>
+}
+
 <table class="table">
     <thead>
         <tr>
@@ -35,7 +45,8 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.NombreProyecto)
@@ -55,12 +66,25 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Presupuesto)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdProyecto">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.IdProyecto">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdProyecto">Eliminar</a>
-            </td>
+
+            @if (User.IsInRole("Administrador"))
+            {
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdProyecto">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdProyecto">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdProyecto">Eliminar</a>
+                </td>
+            }
+            @if (User.IsInRole("Profesional"))
+            {
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdProyecto">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdProyecto">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdProyecto">Eliminar</a>
+                </td>
+            }
+
         </tr>
-}
+        }
     </tbody>
 </table>
