@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ConsultingProject.Infrastructure.Data.Migrations
 {
-    [DbContext(typeof(ConsultingProjectDbContext))]
+    [DbContext(typeof(Data.ConsultingProjectDbContext))]
     [Migration("20201125182011_InitialModel")]
     partial class InitialModel
     {
