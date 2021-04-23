@@ -35,7 +35,7 @@ namespace ConsultingProject.Infrastructure.Data
         public virtual DbSet<TamañoEmpresa> TamañoEmpresa { get; set; }
         public virtual DbSet<TipoDocumento> TipoDocumento { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
-        public virtual DbSet<Cita> CitadeConsultoria { get; set; }
+        public virtual DbSet<Citaconsultoria> Citaconsultoria { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
