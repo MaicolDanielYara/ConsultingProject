@@ -127,7 +127,8 @@ header#imparables {
 }
 
 main#portafolio {
-   width: 100%;
+    width: 100%;
+    height: 400px;
 }
 
 .div-portafolio {
