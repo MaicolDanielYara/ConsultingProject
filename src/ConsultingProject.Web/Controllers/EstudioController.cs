@@ -60,6 +60,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(estudios);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Estudio se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             return View(estudios);
@@ -142,6 +143,7 @@ namespace ConsultingProject.Web.Controllers
             var estudios = await _context.Estudios.FindAsync(id);
             _context.Estudios.Remove(estudios);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Estudio se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

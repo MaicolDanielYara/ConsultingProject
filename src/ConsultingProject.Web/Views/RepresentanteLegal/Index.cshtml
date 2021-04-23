@@ -6,9 +6,27 @@
 }
 
 <h1>Representantes Legales</h1>
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["Mensaje"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">Cerrar</span>
+        </button>
+    </div>
+}
+@if (TempData["MensajeEliminar"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["MensajeEliminar"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">Cerrar</span>
+        </button>
+    </div>
+}
 
 <p>
-    <a asp-action="Create">Crear Nuevo</a>
+    <a asp-action="Create" class="btn btn-warning">Crear Nuevo</a>
 </p>
 <table class="table">
     <thead>
@@ -38,35 +56,36 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NombresRepresentanteLegal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApellidosRepresentanteLegal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NoDocumento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Correo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefono)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdEmpresaNavigation.IdEje)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdTipoDocumentoNavigation.IdTipoDocumento)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdReprLegal">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.IdReprLegal">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdReprLegal">Eliminar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombresRepresentanteLegal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApellidosRepresentanteLegal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoDocumento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Correo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdEmpresaNavigation.IdEje)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdTipoDocumentoNavigation.IdTipoDocumento)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdReprLegal" class="btn btn-primary">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdReprLegal" class="btn btn-info">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdReprLegal" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

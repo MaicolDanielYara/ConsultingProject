@@ -65,6 +65,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Usuario se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProfesional"] = new SelectList(_context.Profesional, "IdProfesional", "IdProfesional", usuario.IdProfesional);
@@ -155,6 +156,7 @@ namespace ConsultingProject.Web.Controllers
             var usuario = await _context.Usuario.FindAsync(id);
             _context.Usuario.Remove(usuario);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Usuario se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

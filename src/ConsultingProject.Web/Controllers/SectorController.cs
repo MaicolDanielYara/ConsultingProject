@@ -60,6 +60,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(sector);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Sector se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             return View(sector);
@@ -142,6 +143,7 @@ namespace ConsultingProject.Web.Controllers
             var sector = await _context.Sector.FindAsync(id);
             _context.Sector.Remove(sector);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Sector se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

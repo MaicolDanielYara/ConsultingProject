@@ -6,9 +6,27 @@
 }
 
 <h1>Usuarios</h1>
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["Mensaje"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">Cerrar</span>
+        </button>
+    </div>
+}
+@if (TempData["MensajeEliminar"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["MensajeEliminar"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">Cerrar</span>
+        </button>
+    </div>
+}
 
 <p>
-    <a asp-action="Create">Crear Nuevo</a>
+    <a asp-action="Create" class="btn btn-warning">Crear Nuevo</a>
 </p>
 <p>
     <a asp-page="/Register">Registrarse Como Un Nuevo usuario</a>
@@ -32,26 +50,27 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NoDocumento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contraseña)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdProfesionalNavigation.IdProfesional)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdRolNavigation.IdRol)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdUsuario">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.IdUsuario">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdUsuario">Eliminar</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoDocumento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contraseña)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdProfesionalNavigation.IdProfesional)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdRolNavigation.IdRol)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdUsuario" class="btn btn-primary">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdUsuario" class="btn btn-info">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdUsuario" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

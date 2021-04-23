@@ -60,6 +60,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(departamento);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Departamento se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             return View(departamento);
@@ -142,6 +143,7 @@ namespace ConsultingProject.Web.Controllers
             var departamento = await _context.Departamento.FindAsync(id);
             _context.Departamento.Remove(departamento);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "La Departamento se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

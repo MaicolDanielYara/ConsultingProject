@@ -63,6 +63,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(ejeSeleccionado);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Eje se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdProyecto"] = new SelectList(_context.Proyecto, "IdProyecto", "IdProyecto", ejeSeleccionado.IdProyecto);
@@ -149,6 +150,7 @@ namespace ConsultingProject.Web.Controllers
             var ejeSeleccionado = await _context.EjeSeleccionado.FindAsync(id);
             _context.EjeSeleccionado.Remove(ejeSeleccionado);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Eje Seleccionado se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

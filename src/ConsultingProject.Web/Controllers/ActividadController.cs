@@ -69,6 +69,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(actividades);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "La Actividad se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdEtapa"] = new SelectList(_context.Etapas, "IdEtapa", "IdEtapa", actividades.IdEtapa);
@@ -166,6 +167,7 @@ namespace ConsultingProject.Web.Controllers
             var actividades = await _context.Actividades.FindAsync(id);
             _context.Actividades.Remove(actividades);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "La Actividad se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

@@ -75,6 +75,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(empresa);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "La Empresa se ha agregado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CódigoDepartamento"] = new SelectList(_context.Departamento, "CódigoDepartamento", "CódigoDepartamento", empresa.CódigoDepartamento);
@@ -185,6 +186,7 @@ namespace ConsultingProject.Web.Controllers
             var empresa = await _context.Empresa.FindAsync(id);
             _context.Empresa.Remove(empresa);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "La Empresa se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

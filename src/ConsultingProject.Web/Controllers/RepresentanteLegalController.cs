@@ -65,6 +65,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(representanteLegal);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Representante Legal se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdEmpresa"] = new SelectList(_context.Empresa, "IdEmpresa", "IdEje", representanteLegal.IdEmpresa);
@@ -155,6 +156,7 @@ namespace ConsultingProject.Web.Controllers
             var representanteLegal = await _context.RepresentanteLegal.FindAsync(id);
             _context.RepresentanteLegal.Remove(representanteLegal);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Representante Legal se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

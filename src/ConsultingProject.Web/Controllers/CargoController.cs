@@ -60,6 +60,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(cargos);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Cargo se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             return View(cargos);
@@ -142,6 +143,7 @@ namespace ConsultingProject.Web.Controllers
             var cargos = await _context.Cargos.FindAsync(id);
             _context.Cargos.Remove(cargos);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Cargo se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

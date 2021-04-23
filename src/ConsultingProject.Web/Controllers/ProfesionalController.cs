@@ -73,6 +73,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(profesional);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Profesional se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdCargo"] = new SelectList(_context.Cargos, "IdCargo", "IdCargo", profesional.IdCargo);
@@ -179,6 +180,7 @@ namespace ConsultingProject.Web.Controllers
             var profesional = await _context.Profesional.FindAsync(id);
             _context.Profesional.Remove(profesional);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Profesional se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

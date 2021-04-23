@@ -6,17 +6,35 @@
 }
 
 <h1>Contenido de Proyectos</h1>
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["Mensaje"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">Cerrar</span>
+        </button>
+    </div>
+}
+@if (TempData["MensajeEliminar"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["MensajeEliminar"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">Cerrar</span>
+        </button>
+    </div>
+}
 
 @if (User.IsInRole("Administrador"))
 {
     <p>
-        <a asp-action="Create">Crear Nuevo</a>
+        <a asp-action="Create" class="btn btn-warning">Crear Nuevo</a>
     </p>
 }
 @if (User.IsInRole("Profesional"))
 {
     <p>
-        <a asp-action="Create">Crear Nuevo</a>
+        <a asp-action="Create" class="btn btn-warning">Crear Nuevo</a>
     </p>
 }
 
@@ -47,44 +65,44 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NombreProyecto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NoConvenio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Objeto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlazoEjecucion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Presupuesto)
-            </td>
-
-            @if (User.IsInRole("Administrador"))
-            {
+            <tr>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdProyecto">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.IdProyecto">Detalles</a> |
-                    <a asp-action="Delete" asp-route-id="@item.IdProyecto">Eliminar</a>
+                    @Html.DisplayFor(modelItem => item.NombreProyecto)
                 </td>
-            }
-            @if (User.IsInRole("Profesional"))
-            {
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdProyecto">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.IdProyecto">Detalles</a> |
-                    <a asp-action="Delete" asp-route-id="@item.IdProyecto">Eliminar</a>
+                    @Html.DisplayFor(modelItem => item.NoConvenio)
                 </td>
-            }
+                <td>
+                    @Html.DisplayFor(modelItem => item.Objeto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PlazoEjecucion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Presupuesto)
+                </td>
 
-        </tr>
+                @if (User.IsInRole("Administrador"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IdProyecto" class="btn btn-primary">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.IdProyecto" class="btn btn-info">Detalles</a> |
+                        <a asp-action="Delete" asp-route-id="@item.IdProyecto" class="btn btn-danger">Eliminar</a>
+                    </td>
+                }
+                @if (User.IsInRole("Profesional"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IdProyecto" class="btn btn-primary">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.IdProyecto" class="btn btn-info">Detalles</a> |
+                        <a asp-action="Delete" asp-route-id="@item.IdProyecto" class="btn btn-danger">Eliminar</a>
+                    </td>
+                }
+
+            </tr>
         }
     </tbody>
 </table>

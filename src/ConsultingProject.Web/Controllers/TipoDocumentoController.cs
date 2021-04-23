@@ -60,6 +60,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(tipoDocumento);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Tipo de Documento se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             return View(tipoDocumento);
@@ -142,6 +143,7 @@ namespace ConsultingProject.Web.Controllers
             var tipoDocumento = await _context.TipoDocumento.FindAsync(id);
             _context.TipoDocumento.Remove(tipoDocumento);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Tipo de Documento se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

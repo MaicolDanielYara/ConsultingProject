@@ -63,6 +63,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(herramientas);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "La Herramienta se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdEje"] = new SelectList(_context.EjeSeleccionado, "IdEje", "IdEje", herramientas.IdEje);
@@ -149,6 +150,7 @@ namespace ConsultingProject.Web.Controllers
             var herramientas = await _context.Herramientas.FindAsync(id);
             _context.Herramientas.Remove(herramientas);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "La Herramienta se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

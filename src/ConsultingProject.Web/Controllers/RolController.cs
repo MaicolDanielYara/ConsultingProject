@@ -60,6 +60,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(rol);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Rol se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             return View(rol);
@@ -142,6 +143,7 @@ namespace ConsultingProject.Web.Controllers
             var rol = await _context.Rol.FindAsync(id);
             _context.Rol.Remove(rol);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Rol se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

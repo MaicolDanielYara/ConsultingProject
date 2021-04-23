@@ -63,6 +63,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(municipio);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Municipio se ha agregado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CódigoDepartamento"] = new SelectList(_context.Departamento, "CódigoDepartamento", "CódigoDepartamento", municipio.CódigoDepartamento);
@@ -149,6 +150,7 @@ namespace ConsultingProject.Web.Controllers
             var municipio = await _context.Municipio.FindAsync(id);
             _context.Municipio.Remove(municipio);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Municipio se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

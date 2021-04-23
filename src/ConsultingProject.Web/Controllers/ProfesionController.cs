@@ -60,6 +60,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(profesiones);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "La Profesión se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             return View(profesiones);
@@ -142,6 +143,7 @@ namespace ConsultingProject.Web.Controllers
             var profesiones = await _context.Profesiones.FindAsync(id);
             _context.Profesiones.Remove(profesiones);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "La Profesión se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

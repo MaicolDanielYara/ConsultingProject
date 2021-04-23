@@ -60,6 +60,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(contactoEmpresa);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Contacto de la Empresa se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             return View(contactoEmpresa);
@@ -142,6 +143,7 @@ namespace ConsultingProject.Web.Controllers
             var contactoEmpresa = await _context.ContactoEmpresa.FindAsync(id);
             _context.ContactoEmpresa.Remove(contactoEmpresa);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Contacto de la Empresa se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

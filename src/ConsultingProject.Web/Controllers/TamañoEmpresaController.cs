@@ -60,6 +60,7 @@ namespace ConsultingProject.Web.Controllers
             {
                 _context.Add(tamañoEmpresa);
                 await _context.SaveChangesAsync();
+                TempData["Mensaje"] = "El Tamaño de Empresa se ha creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
             return View(tamañoEmpresa);
@@ -142,6 +143,7 @@ namespace ConsultingProject.Web.Controllers
             var tamañoEmpresa = await _context.TamañoEmpresa.FindAsync(id);
             _context.TamañoEmpresa.Remove(tamañoEmpresa);
             await _context.SaveChangesAsync();
+            TempData["MensajeEliminar"] = "El Tamaño de Empresa se ha eliminado correctamente";
             return RedirectToAction(nameof(Index));
         }
 

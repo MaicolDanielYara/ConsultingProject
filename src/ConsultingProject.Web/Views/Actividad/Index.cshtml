@@ -11,16 +11,35 @@
 <p></p>
 <h1>Contenido de Actividades</h1>
 
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["Mensaje"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">Cerrar</span>
+        </button>
+    </div>
+}
+@if (TempData["MensajeEliminar"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @TempData["MensajeEliminar"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">Cerrar</span>
+        </button>
+    </div>
+}
+
 @if (User.IsInRole("Administrador"))
 {
     <p>
-        <a asp-action="Create">Crear Nuevo</a>
+        <a asp-action="Create" class="btn btn-warning">Crear Nuevo</a>
     </p>
 }
 @if (User.IsInRole("Profesional"))
 {
     <p>
-        <a asp-action="Create">Crear Nuevo</a>
+        <a asp-action="Create" class="btn btn-warning">Crear Nuevo</a>
     </p>
 }
 
@@ -67,17 +86,17 @@
                 @if (User.IsInRole("Administrador"))
                 {
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.IdActividad">Editar</a> |
-                        <a asp-action="Details" asp-route-id="@item.IdActividad">Detalles</a> |
-                        <a asp-action="Delete" asp-route-id="@item.IdActividad">Eliminar</a>
+                        <a asp-action="Edit" asp-route-id="@item.IdActividad" class="btn btn-primary">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.IdActividad" class="btn btn-info">Detalles</a> |
+                        <a asp-action="Delete" asp-route-id="@item.IdActividad" class="btn btn-danger">Eliminar</a>
                     </td>
                 }
                 @if (User.IsInRole("Profesional"))
                 {
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.IdActividad">Editar</a> |
-                        <a asp-action="Details" asp-route-id="@item.IdActividad">Detalles</a> |
-                        <a asp-action="Delete" asp-route-id="@item.IdActividad">Eliminar</a>
+                        <a asp-action="Edit" asp-route-id="@item.IdActividad" class="btn btn-primary">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.IdActividad" class="btn btn-info">Detalles</a> |
+                        <a asp-action="Delete" asp-route-id="@item.IdActividad" class="btn btn-danger">Eliminar</a>
                     </td>
                 }
 

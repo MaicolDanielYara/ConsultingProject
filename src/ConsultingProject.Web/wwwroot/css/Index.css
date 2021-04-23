@@ -160,6 +160,13 @@ section#quienes-somos {
     background-position: center;
     background-repeat: no-repeat;
 }
+.IMAGENCP {
+    width: 100%;
+    height: 250px;
+    background-image: url("../img/logo_CP2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .Cp-image {
     width: 100%;
     height: 250px;
