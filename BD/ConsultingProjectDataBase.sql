@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3310
--- Tiempo de generación: 03-12-2020 a las 20:53:43
+-- Tiempo de generación: 19-04-2021 a las 22:25:14
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `consultingproject`
 --
-CREATE DATABASE IF NOT EXISTS `consultingproject` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `consultingproject`;
 
 -- --------------------------------------------------------
 
@@ -87,6 +85,15 @@ CREATE TABLE `aspnetroles` (
   `ConcurrencyStamp` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `aspnetroles`
+--
+
+INSERT INTO `aspnetroles` (`Id`, `Name`, `NormalizedName`, `ConcurrencyStamp`) VALUES
+('admin01', 'Administrador', 'Administrador', NULL),
+('consultor01', 'Consultor', 'Consultor', NULL),
+('profesional01', 'Profesional', 'Profesional', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -124,6 +131,15 @@ CREATE TABLE `aspnetuserroles` (
   `RoleId` varchar(127) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `aspnetuserroles`
+--
+
+INSERT INTO `aspnetuserroles` (`UserId`, `RoleId`) VALUES
+('0a95cedc-ae66-4e6b-a290-e2a86b09bd77', 'consultor01'),
+('1c4af4e6-6dfc-4dd6-a812-93b5391fff8e', 'admin01'),
+('1eaeb03c-ebdc-4118-88c0-74dd162328bc', 'profesional01');
+
 -- --------------------------------------------------------
 
 --
@@ -153,8 +169,9 @@ CREATE TABLE `aspnetusers` (
 --
 
 INSERT INTO `aspnetusers` (`Id`, `UserName`, `NormalizedUserName`, `Email`, `NormalizedEmail`, `EmailConfirmed`, `PasswordHash`, `SecurityStamp`, `ConcurrencyStamp`, `PhoneNumber`, `PhoneNumberConfirmed`, `TwoFactorEnabled`, `LockoutEnd`, `LockoutEnabled`, `AccessFailedCount`) VALUES
+('0a95cedc-ae66-4e6b-a290-e2a86b09bd77', 'consultortest@gmail.com', 'CONSULTORTEST@GMAIL.COM', 'consultortest@gmail.com', 'CONSULTORTEST@GMAIL.COM', 0, 'AQAAAAEAACcQAAAAEEz05KI5U5L7EXjY7uWwvK+jasEbF/QL1wQ1/VDPGWU1xBXRMx5rPlKGVS8F66zVWw==', 'VAA4M3XRWEL7MHM67XR6FX76H5MNGCV6', 'af89932a-7f9c-4344-817c-b4e464898c3e', NULL, 0, 0, NULL, 1, 0),
 ('1c4af4e6-6dfc-4dd6-a812-93b5391fff8e', 'myarag17@gmail.com', 'MYARAG17@GMAIL.COM', 'myarag17@gmail.com', 'MYARAG17@GMAIL.COM', 0, 'AQAAAAEAACcQAAAAEHxniZAHK+/7G/BaKQRcvXSgQJX97cCUC9lnTiMS1cWUuJ1KA2JFoESxaYaqU3myWA==', 'PPG5CCVCRH6J4BVC3B4SI5W6RN2JKNI6', 'c7c61937-07cd-4501-9dcf-8bfec760f394', NULL, 0, 0, NULL, 1, 0),
-('d2d8119f-1914-40d1-ba85-996fcac879f8', 'elmaicolproaso@gmail.com', 'ELMAICOLPROASO@GMAIL.COM', 'elmaicolproaso@gmail.com', 'ELMAICOLPROASO@GMAIL.COM', 0, 'AQAAAAEAACcQAAAAEMxm1TFr+lf3HMnxdjWSvft3Kr9X83VWoQWbchOrM/+IUn9dmEvoTAGqXNV1AN1GhQ==', 'DU2JZNSCXBTTJWJNRM5JAWFXLRXAELLY', '86609433-ab6c-4de1-af11-14f2a4e6ea47', NULL, 0, 0, NULL, 1, 0);
+('1eaeb03c-ebdc-4118-88c0-74dd162328bc', 'usuariotest@gmail.com', 'USUARIOTEST@GMAIL.COM', 'usuariotest@gmail.com', 'USUARIOTEST@GMAIL.COM', 0, 'AQAAAAEAACcQAAAAEA3xkZQLcWN4AvBKqdXIzLPsJOn+tULG43+Ag9CnBy5DpZtNpbzgxkhEtvvUzPhqSw==', 'O46YOXLUJDCFFKNRE727TK6ILDBZJZD6', '24aaf054-8bc1-4d21-ace3-49831fd05123', NULL, 0, 0, NULL, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -191,6 +208,21 @@ INSERT INTO `cargos` (`Id_cargo`, `Cargo`) VALUES
 ('CP', 'Coordinador de proyecto'),
 ('CT', 'Coordinador técnico'),
 ('DP', 'Director de proyecto');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `citaconsultoria`
+--
+
+CREATE TABLE `citaconsultoria` (
+  `id_citaconsultoria` varchar(5) NOT NULL,
+  `Empresa` varchar(50) NOT NULL,
+  `Asunto` varchar(200) NOT NULL,
+  `Fechayhora` date NOT NULL DEFAULT current_timestamp(),
+  `Lugar` varchar(50) NOT NULL,
+  `Invitar_Correo` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -2230,6 +2262,12 @@ ALTER TABLE `aspnetusertokens`
 --
 ALTER TABLE `cargos`
   ADD PRIMARY KEY (`Id_cargo`);
+
+--
+-- Indices de la tabla `citaconsultoria`
+--
+ALTER TABLE `citaconsultoria`
+  ADD PRIMARY KEY (`id_citaconsultoria`);
 
 --
 -- Indices de la tabla `contacto_empresa`
