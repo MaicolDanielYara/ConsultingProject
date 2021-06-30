@@ -1,11 +1,18 @@
-Buena tarde Michael, generamos este archivo luego de la prevalidación del proyecto:
+.
 
-1). Estuvimos validando el Proyecto pero tiene una serie de inconsistencias debido a las versiones instaladas de los paquetes Nuget, y tambien podria haber incompatibilidad 
-entre las versiones de la Base de Datos Mysql, por favor validar el tema y realizar las actualizaciones, creemos que tambien es necesario realizar un nuevo Scaffolding ya que 
-hemos hecho varias actualizaciones en la Base de Datos de prueba, la nueva Base de Datos de prueba la encuentras en nuestro Equipo BDsBatch de MicrosoftTeams.
 
-2). Por Favor Mike, luego de que soluciones estos inconvenientes empieza a llenar nuestro Formato Excel de casos de prueba (Solicitalo a nuestro equipo Testing) y actualiza tu 
-formato técnico del proyecto, indicando la fecha en que nuestro equipo testing puede empezar a realizar pruebas en el Software y poder indicar si pasamos el proyecto a producción.
+Buena tarde Michael, espero te encuentres bien, 
+generamos este archivo luego de la prevalidación del proyecto:
+
+
+1). Estuvimos validando el Proyecto pero tiene una serie de inconsistencias debido a las versiones instaladas de los paquetes Nuget, y tambien podria haber
+incompatibilidad entre las versiones de la Base de Datos Mysql, por favor validar el tema y realizar las actualizaciones, creemos que tambien es necesario 
+realizar un nuevo Scaffolding ya que hemos hecho varias actualizaciones en la Base de Datos de prueba, la nueva Base de Datos de prueba la encuentras en 
+nuestro Equipo BDsBatch de MicrosoftTeams.
+
+2). Por Favor Mike, luego de que soluciones estos inconvenientes empieza a llenar nuestro Formato Excel de casos de prueba (Solicitalo a nuestro equipo 
+Testing) y actualiza tu formato técnico del proyecto, indicando la fecha en que nuestro equipo testing puede empezar a realizar pruebas en el Software y
+poder indicar si pasamos el proyecto a producción.
 
 
 Muchas Gracias, quedamos atentos a tus inquietudes
@@ -14,3 +21,9 @@ Cordialmente,
 
 Coordinación Batch
 Coordinación Testing
+
+
+
+
+
+.
